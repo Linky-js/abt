@@ -1,0 +1,30 @@
+.achievements-module__wrapper {
+    margin-top: 110px;
+}
+
+.achievements-container {
+    max-width: 1000px;
+    padding: 0 22px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.achievements-module__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 885px) {
+    .achievements-module__content {
+        justify-content: center;
+        gap: 60px 80px;
+    }
+}
+
+@media (max-width: 512px) {
+    .achievements-module__content {
+        gap: 30px 30px;
+    }
+}
