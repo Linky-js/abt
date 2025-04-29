@@ -51,8 +51,8 @@ const linksHeader = [
 
 <style lang="sass" scoped>
 .header 
-  max-width: 1440px
-  margin: 21px auto 0 
+  margin-top: 20px
+  width: 100%
   padding: 18px 50px
   background: #FAFAFA
   border-radius: 55px
@@ -76,10 +76,12 @@ const linksHeader = [
     border-radius: 50%
     padding: 12px
     transition: .3s all
+    color: #000
     &:hover
       background: var(--primary-purple)
-      svg g
-        fill: var(--white)
+      color: #fff
+      svg g path
+        fill: #fff
 
 .header__links
   display: flex

@@ -1,29 +1,19 @@
 <script setup lang="ts">
 defineProps<{
-  color?: string
-  size: {w: string, h: string}
+  size: { w: string, h: string }
   rotate?: number
 }>()
 </script>
 
 <template>
-  <svg
-    version="1.0"
-    xmlns="http://www.w3.org/2000/svg"
-    :style="`transform: rotate(${rotate}deg)`"
-    :width="size.w"
-    :height="size.h"
-    viewBox="0 0 512.000000 512.000000"
-    preserveAspectRatio="xMidYMid meet">
-    <g
-      transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-      :fill="color"
-      stroke="none">
-      <path d="M2230 5104 c-1022 -131 -1871 -871 -2145 -1869 -59 -217 -77 -344 -82 -603 -6 -255 3 -381 43 -578 132 -668 534 -1262 1109 -1640 331 -217 694 -350 1095 -400 152 -19 472 -18 630 1 748 93 1416 512 1833 1150 210 321 344 690 392 1075 20 162 20 478 0 640 -92 744 -509 1411 -1140 1826 -329 216 -695 350 -1085 399 -153 19 -501 18 -650 -1z m1549 -1564 c34 -35 46 -82 37 -143 -21 -129 -429 -2028 -443 -2060 -21 -48 -66 -87 -101 -87 -50 1 -107 37 -415 264 -170 125 -315 230 -323 233 -9 3 -77 -56 -185 -158 -180 -173 -184 -176 -229 -189 -27 -8 -28 -7 -24 29 2 20 11 142 19 271 8 129 18 258 21 287 l5 52 600 541 c382 346 599 548 599 560 0 26 -32 34 -72 17 -18 -8 -362 -222 -764 -475 l-731 -460 -254 79 c-140 44 -291 91 -335 105 -133 40 -167 93 -100 152 20 17 92 52 177 85 79 31 650 252 1269 491 879 339 1135 435 1172 435 39 1 51 -4 77 -29z"/>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+  :style="`transform: rotate(${rotate}deg); enable-background: new 0 0 512 512`" :width="size.w" :height="size.h" x="0" y="0" viewBox="0 0 24 24" xml:space="preserve" class="">
+    <g>
+      <path
+        d="M12 24c6.629 0 12-5.371 12-12S18.629 0 12 0 0 5.371 0 12s5.371 12 12 12zM5.491 11.74l11.57-4.461c.537-.194 1.006.131.832.943l.001-.001-1.97 9.281c-.146.658-.537.818-1.084.508l-3-2.211-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953z"
+        fill="currentColor" opacity="1" data-original="#000000" class=""></path>
     </g>
   </svg>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

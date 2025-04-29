@@ -1,11 +1,9 @@
 <script setup lang="ts">
 const props = withDefaults(  defineProps<{
   name: string
-  color?: string
   size?: {w: string, h: string}
   rotate?: number
 }>(), {
-  color: '#000',
   size: () => {
     return {w: '30px', h: '30px'};
   },
@@ -23,7 +21,6 @@ const props = withDefaults(  defineProps<{
       :is="dymamicComponent"
       :size="size"
       :rotate="rotate"
-      :color="color"
     />
   </div>
 </template>

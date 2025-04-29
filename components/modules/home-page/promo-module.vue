@@ -9,7 +9,7 @@ const isShowRightBlock = computed(() => {
 
 const serviceCompanyItems = [
   [
-    { text: 'Системы управления бизнесом: </br> ERP, CRM, WMS, SRM и пр.', icon: 'mark-icon', sizeIcon: { w: '18px', h: '18px' } },
+    { text: 'Системы управления бизнесом: </br> ERP, CRM, WMS, SRM и пр.', icon: 'crm-icon', sizeIcon: { w: '18px', h: '18px' } },
     { text: 'Многостраничные </br> сайты компании', icon: 'inclined-arrow-icon', sizeIcon: { w: '14px', h: '14px' } },
   ],
   [
@@ -28,7 +28,11 @@ const serviceCompanyItems = [
           <ui-base-button class="promo-button">
             Заказать бесплатную консультацию
           </ui-base-button>
-          <img v-if="!isShowRightBlock" class="promo__img-left" src="@/assets/image/home-promo-img.png" alt="img">
+          <div v-if="!isShowRightBlock" class="promo__img-left">
+            <img src="@/assets/image/promo-1.png" alt="" class="promo-img-1">
+            <img src="@/assets/image/promo-2.png" alt="" class="promo-img-2">
+            <img src="@/assets/image/promo-3.png" alt="" class="promo-img-3">
+          </div>
           <div class="promo__services">
             <div class="promo__service">
               <ui-icon-text-item v-for="item of serviceCompanyItems[0]" :key="item.text" :text-item="item.text"
@@ -41,7 +45,9 @@ const serviceCompanyItems = [
           </div>
         </div>
         <div v-if="isShowRightBlock" class="promo__content-right">
-          <img src="@/assets/image/home-promo-img.png" alt="img">
+          <img src="@/assets/image/promo-1.png" alt="" class="promo-img-1">
+          <img src="@/assets/image/promo-2.png" alt="" class="promo-img-2">
+          <img src="@/assets/image/promo-3.png" alt="" class="promo-img-3">
         </div>
       </div>
     </client-only>
@@ -50,9 +56,10 @@ const serviceCompanyItems = [
 
 <style lang="sass" scoped>
 .promo
-  max-width: 1440px
-  margin: 25px auto 0
+  margin-top: 25px
+  width: 100%
   padding: 55px
+  padding-bottom: 122px
   background: #FAFAFA
   border-radius: 40px
 
@@ -87,7 +94,7 @@ const serviceCompanyItems = [
 
 .promo__content-left h1
   color: var(--primary-grey)
-  font-size: 54px
+  font-size: 62px
   font-weight: 600
   line-height: 110%
   letter-spacing: -2%
@@ -95,7 +102,28 @@ const serviceCompanyItems = [
   max-width: 592px
   margin-bottom: 32px
   width: 100%
-
+.promo__content-left
+  width: 100%
+.promo__content-right
+  position: relative
+  max-width: 588px
+  width: 100%
+  height: max-content
+.promo-img-1
+  width: 588px
+  height: auto
+.promo-img-2
+  width: 358px
+  height: auto
+  position: absolute
+  left: -45px
+  bottom: -104px
+.promo-img-3
+  width: 269px
+  height: auto
+  position: absolute
+  right: -12px
+  bottom: -196px
 @media (max-width: 1050px)
   .promo__content-left h1
     font-size: 32px
