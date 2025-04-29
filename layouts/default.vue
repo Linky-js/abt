@@ -3,11 +3,9 @@
 </script>
 
 <template>
-  <div class="the-default-layout">
-    <the-header/>
-    <NuxtPage/>
-    <the-footer/>
-  </div>
+  <the-header/>
+  <NuxtPage/>
+  <the-footer/>
 </template>
 
 <style scoped>
