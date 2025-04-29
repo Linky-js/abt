@@ -19,6 +19,7 @@
   position: relative
   transition: .3s 
   overflow: hidden
+  
   &::before
     position: absolute
     content: ''
